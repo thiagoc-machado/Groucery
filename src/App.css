@@ -1,38 +1,126 @@
 .App {
+  width: 90%;
+  margin: 2em auto;
+  background-color: #394049;
+  border-radius: 5px;
+  color: #fff;
+}
+.todo-header {
+  padding: 0.5em;
+  border-bottom: 1px solid #2c3035;
+  text-align: center;
+}
+.todo-header h1 {
+  margin: 0;
+}
+.form-todo {
+  padding: 1em;
+  margin: 0 2em;
+  border-bottom: 1px solid #2c3035;
+}
+.form-todo h2,
+.list-todo h2 {
+  text-align: center;
+  margin-top: 0;
+}
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form-control-qtd {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.form-control-qtd label {
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-bottom: 0.4em;
+}
+.form-control-qtd input {
+  border: 1px solid #222;
+  border-radius: 2px;
+  background-color: #2c3035;
+  padding: 0.5em;
+  color: #dfdfdf;
+}
+.form-control-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.form-control-title label {
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-bottom: 0.4em;
+}
+.form-control-title input {
+  border: 1px solid #222;
+  border-radius: 2px;
+  background-color: #2c3035;
+  padding: 0.5em;
+  color: #dfdfdf;
+}
+
+.list-todo .list-items{
+  display: flex;
+  flex-direction: row;
+}
+
+input[type='submit'] {
+  background-color: #333;
+  color: #eee;
+  display: block;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.list-todo {
+  padding: 0 1em 2em;
+  margin: 1em 2em;
+}
+
+.list-todo h2 {
+  margin-bottom: 0;
+}
+
+.list-todo p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid #444;
+  padding: 1em 0;
 }
 
-.App-link {
-  color: #61dafb;
+.todo h3 {
+  margin-bottom: 0.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-done {
+  text-decoration: line-through;
+  color: rgb(240, 98, 146);
+}
+
+.todo p {
+  text-align: left;
+  font-style: italic;
+  font-size: 0.7em;
+  margin-bottom: 1.5em;
+}
+.todo svg {
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-right: 1em;
+  transition: 0.5s;
+}
+.todo svg:hover {
+  color: rgb(240, 98, 146);
 }
